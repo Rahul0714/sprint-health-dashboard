@@ -93,7 +93,6 @@ LIMIT 15
 ## 🏆 Why This Wins
 - Showcases Coral's core superpower: **cross-source JOINs in one query**
 - Real business value: blocked sprint = delayed releases = money lost
-- Claude + Coral = 31% more accurate, 3.4x more cost efficient (per Coral benchmarks)
 - Clean, production-grade UI that judges can actually use
 
 ## 👨‍💻 Built at
