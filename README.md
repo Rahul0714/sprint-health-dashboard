@@ -1,7 +1,7 @@
 # 🏴‍☠️ Sprint Health Dashboard
 > Pirates of the Coral-bean Hackathon Submission
 
-A cross-source sprint intelligence agent that joins **GitHub issues**, **PRs**, **Slack threads**, and **Linear tasks** via a single Coral SQL query — then uses Claude to analyze what's blocked, what's in review, and what needs attention.
+A cross-source sprint intelligence agent that joins **GitHub issues**, **PRs**, **Slack threads**, and **Linear tasks** via a single Coral SQL query and analyze what's blocked, what's in review, and what needs attention.
 
 ## 🎥 Demo
 [Add your Loom/video link here]
@@ -10,8 +10,6 @@ A cross-source sprint intelligence agent that joins **GitHub issues**, **PRs**, 
 
 ```
 React Dashboard (UI)
-       ↓
-Claude Agent (claude-sonnet-4)
        ↓
 Coral MCP Server (local)
        ↓
@@ -33,7 +31,6 @@ Coral MCP Server (local)
 ## ✨ Features
 - **Cross-source JOIN** — single Coral SQL query spans GitHub + Slack + Linear + Confluence
 - **Blocked detection** — issues with no linked PR and stale activity auto-flagged
-- **AI analysis** — Claude reads the joined data and gives actionable sprint recommendations
 - **Live data** — runs via `coral mcp-stdio` MCP server
 - **4 sources, 1 query** — no bespoke glue code
 
@@ -70,9 +67,6 @@ npm install
 npm start
 ```
 
-### 5. Add your Anthropic API key
-Enter it in the dashboard UI to enable AI sprint analysis.
-
 ## 🔑 The Coral Query
 ```sql
 SELECT i.number, i.title AS issue_title, i.state,
@@ -93,7 +87,6 @@ LIMIT 15
 
 ## 🧰 Tech Stack
 - **Coral** — cross-source SQL runtime (the star of the show)
-- **Claude** (claude-sonnet-4) — AI sprint analysis agent
 - **React** — dashboard UI
 - **GitHub / Slack / Linear / Confluence** — data sources via Coral
 
